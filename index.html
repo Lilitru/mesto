@@ -15,8 +15,10 @@
       <section class="profile">
         <img class="profile__avatar" src="./images/profile__image.jpg" alt="Фото Кусто">
         <div class="profile__info">
-          <h1 class="profile__info-title">Жак-Ив Кусто</h1>
-          <button type="button" class="profile__info-button"><img src="./images/Edit Button.svg" alt="Кнопка редактирования"></button> 
+          <div class="profile__info-container">
+            <h1 class="profile__info-title">Жак-Ив Кусто</h1>
+            <button type="button" class="profile__info-button"><img src="./images/Edit Button.svg" alt="Кнопка редактирования"></button> 
+          </div>
           <p class="profile__info-subtitle">Исследователь океана</p>
         </div>
         <button type="button" class="profile__addbutton"><img  src="./images/AddButton.svg" alt="Кнопка добавить"></button>
@@ -24,36 +26,54 @@
       <section class="elements">
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__karachaevsk.jpg" alt="Фото Карачаевск"></li>
-          <li><h2 class="cards__title">Карачаевск</h2></li>
-          <li><img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце"></li>
+          <li class="cards__description"><h2 class="cards__title">Карачаевск</h2>
+            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+          </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__elbrus.png" alt="Фото Эльбрус"></li>
-          <li><h2 class="cards__title">Гора Эльбрус</h2></li>
-          <li><img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце"></li>
+          <li class="cards__description"><h2 class="cards__title">Гора Эльбрус</h2>
+            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+          </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__dombay.png" alt="Домбай"></li>
-          <li><h2 class="cards__title">Домбай</h2></li>
-          <li><img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце"></li>
+          <li class="cards__description"><h2 class="cards__title">Домбай</h2>
+            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+          </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__elbrus.png" alt="Фото Эльбрус"></li>
-          <li><h2 class="cards__title">Гора Эльбрус</h2></li>
-          <li><img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце"></li>
+          <li class="cards__description"><h2 class="cards__title">Гора Эльбрус</h2>
+            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+          </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__dombay.png" alt="Домбай"></li>
-          <li><h2 class="cards__title">Домбай</h2></li>
-          <li><img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце"></li>
+          <li class="cards__description"><h2 class="cards__title">Домбай</h2>
+            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+          </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__karachaevsk.jpg" alt="Фото Карачаевск"></li>
-          <li><h2 class="cards__title">Карачаево-Черкессия</h2></li>
-          <li><img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце"></li>
+          <li class="cards__description"><h2 class="cards__title">Карачаево-Черкессия</h2>
+            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+          </li>
         </ul>
       </section>
     </main>
     <footer class="footer">© 2020 Mesto Russia</footer>
+    <div class="popup">
+      <div class="popup__cont">
+        <button class="popup__close"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form">
+          <input type="text" class="popup__input popup__input_name" placeholder="Жак-Ив Кусто">
+          <input type="text" class="popup__input popup__input_profession" placeholder="Исследователь океана">
+          <button type="submit" class="popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

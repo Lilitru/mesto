@@ -1,7 +1,15 @@
-.page{
+.page {
   max-width: 1280px;
-  background-color:black;
+  background-color: black;
   margin: 0 auto;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 1279px) {
+  .page{
+    max-width: 320px;
+  }
 }

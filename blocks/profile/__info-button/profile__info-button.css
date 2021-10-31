@@ -2,4 +2,13 @@
   max-width: 24px;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
+}
+.profile__info-button:hover{
+  opacity: 0.6;
+}
+@media screen and (max-width: 1279px) {
+  .profile__info-button {
+    max-width: 18px;
+  }
 }
