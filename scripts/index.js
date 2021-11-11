@@ -2,16 +2,17 @@ const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
 const infoButton = document.querySelector('.profile__info-button');
 
-const formButton = document.querySelector('.popup__button'); 
 const form = document.querySelector('.popup__form');
 
-const nameField = document.querySelector('.popup__input_name');
+const nameField = document.querySelector('input[name="name"]');
 const nameMan = document.querySelector('.profile__info-title');
-const professionField = document.querySelector('.popup__input_profession')
+const professionField = document.querySelector('input[name="profession"]')
 const professionMan = document.querySelector('.profile__info-subtitle')
 
 function openPopup(){
-    popup.classList.add('popup_opened')
+    popup.classList.add('popup_opened');
+    nameField.textContent = nameMan.textContent;
+    professionField.textContent = professionMan.textContent;
 }
 function closePopup(){
     popup.classList.remove('popup_opened')
@@ -20,14 +21,14 @@ function closePopup(){
 infoButton.addEventListener('click', openPopup)
 popupClose.addEventListener('click', closePopup)
 
-function popupClickHandler(event){
+/*function popupClickHandler(event){
     console.log(event.target)
     if (event.target.classList.contains('popup')){
         closePopup()
     }
 }
 
-popup.addEventListener('mouseup', popupClickHandler)
+popup.addEventListener('mouseup', popupClickHandler)*/
 
 function submitForm(event){
     event.preventDefault();

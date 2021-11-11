@@ -26,49 +26,51 @@
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__karachaevsk.jpg" alt="Фото Карачаевск"></li>
           <li class="cards__description"><h2 class="cards__title">Карачаевск</h2>
-            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+            <button class="cards__like" type="button"></button>
           </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__elbrus.png" alt="Фото Эльбрус"></li>
           <li class="cards__description"><h2 class="cards__title">Гора Эльбрус</h2>
-            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+            <button class="cards__like" type="button"></button>
           </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__dombay.png" alt="Домбай"></li>
           <li class="cards__description"><h2 class="cards__title">Домбай</h2>
-            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+            <button class="cards__like" type="button"></button>
           </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__elbrus.png" alt="Фото Эльбрус"></li>
           <li class="cards__description"><h2 class="cards__title">Гора Эльбрус</h2>
-            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+            <button class="cards__like" type="button"></button>
           </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__dombay.png" alt="Домбай"></li>
           <li class="cards__description"><h2 class="cards__title">Домбай</h2>
-            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+            <button class="cards__like" type="button"></button>
           </li>
         </ul>
         <ul class="cards">
           <li><img class="cards__img" src="./images/elements__karachaevsk.jpg" alt="Фото Карачаевск"></li>
           <li class="cards__description"><h2 class="cards__title">Карачаево-Черкессия</h2>
-            <img class="cards__like" src="./images/Vector__heart.svg" alt="рисунок сердце">
+            <button class="cards__like" type="button"></button>
           </li>
         </ul>
       </section>
     </main>
-    <footer class="footer">© 2020 Mesto Russia</footer>
+    <footer class="footer">
+      <p class="footer__paragraph">© 2020 Mesto Russia</p>
+    </footer>
     <div class="popup">
       <div class="popup__cont">
-        <button class="popup__close"></button>
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form">
-          <input type="text" class="popup__input popup__input_name" placeholder="Жак-Ив Кусто">
-          <input type="text" class="popup__input popup__input_profession" placeholder="Исследователь океана">
+        <button class="popup__close" type="button"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form name="form" class="popup__form">
+          <input name="name" type="text" class="popup__input" placeholder="Жак-Ив Кусто">
+          <input name="profession" type="text" class="popup__input" placeholder="Исследователь океана">
           <button type="submit" class="popup__button">Сохранить</button>
         </form>
       </div>
