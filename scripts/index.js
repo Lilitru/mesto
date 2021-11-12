@@ -11,8 +11,8 @@ const professionMan = document.querySelector('.profile__info-subtitle')
 
 function openPopup(){
     popup.classList.add('popup_opened');
-    nameField.textContent = nameMan.textContent;
-    professionField.textContent = professionMan.textContent;
+    nameField.value = nameMan.textContent;
+    professionField.value = professionMan.textContent;
 }
 function closePopup(){
     popup.classList.remove('popup_opened')

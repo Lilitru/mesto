@@ -1,6 +1,7 @@
-.cards__description{
-    display: flex;
-    justify-content: space-between;
-    max-width: 246px;
-    margin: 25px 0 31px 21px;
+.cards__description {
+  display: flex;
+  justify-content: space-between;
+  max-width: 246px;
+  margin: 25px 0 0 21px;
+  padding-bottom: 31px;
 }

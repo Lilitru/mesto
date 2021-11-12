@@ -12,51 +12,59 @@
     </header>
     <main class="content">
       <section class="profile">
-        <img class="profile__avatar" src="./images/profile__image.jpg" alt="Фото Кусто">
+        <img class="profile__avatar" src="./images/profile__image.jpg" alt="Аватар пользователя">
         <div class="profile__info">
           <div class="profile__info-container">
             <h1 class="profile__info-title">Жак-Ив Кусто</h1>
-            <button type="button" class="profile__info-button"><img src="./images/Edit_Button.svg" alt="Кнопка редактирования"></button> 
+            <button type="button" class="profile__info-button"></button> 
           </div>
           <p class="profile__info-subtitle">Исследователь океана</p>
         </div>
-        <button type="button" class="profile__addbutton"><img  src="./images/AddButton.svg" alt="Кнопка добавить"></button>
+        <button type="button" class="profile__addbutton"></button>
       </section>
       <section class="elements">
-        <ul class="cards">
-          <li><img class="cards__img" src="./images/elements__karachaevsk.jpg" alt="Фото Карачаевск"></li>
-          <li class="cards__description"><h2 class="cards__title">Карачаевск</h2>
-            <button class="cards__like" type="button"></button>
+        <ul class="list">
+          <li class="cards">
+            <img class="cards__img" src="./images/elements__karachaevsk.jpg" alt="Фото Карачаевск">
+            <div class="cards__description">
+              <h2 class="cards__title">Карачаевск</h2>
+              <button class="cards__like" type="button"></button>
+            </div>
           </li>
-        </ul>
-        <ul class="cards">
-          <li><img class="cards__img" src="./images/elements__elbrus.png" alt="Фото Эльбрус"></li>
-          <li class="cards__description"><h2 class="cards__title">Гора Эльбрус</h2>
-            <button class="cards__like" type="button"></button>
+          <li class="cards">
+            <img class="cards__img" src="./images/elements__elbrus.png" alt="Фото Эльбрус">
+            <div class="cards__description">
+              <h2 class="cards__title">Гора Эльбрус</h2>
+              <button class="cards__like" type="button"></button>
+            </div>
           </li>
-        </ul>
-        <ul class="cards">
-          <li><img class="cards__img" src="./images/elements__dombay.png" alt="Домбай"></li>
-          <li class="cards__description"><h2 class="cards__title">Домбай</h2>
-            <button class="cards__like" type="button"></button>
+          <li class="cards">
+            <img class="cards__img" src="./images/elements__dombay.png" alt="Домбай">
+            <div class="cards__description">
+              <h2 class="cards__title">Домбай</h2>
+              <button class="cards__like" type="button"></button>
+            </div>
           </li>
-        </ul>
-        <ul class="cards">
-          <li><img class="cards__img" src="./images/elements__elbrus.png" alt="Фото Эльбрус"></li>
-          <li class="cards__description"><h2 class="cards__title">Гора Эльбрус</h2>
-            <button class="cards__like" type="button"></button>
+          <li class="cards">
+            <img class="cards__img" src="./images/elements__elbrus.png" alt="Фото Эльбрус">
+            <div class="cards__description">
+              <h2 class="cards__title">Гора Эльбрус</h2>
+              <button class="cards__like" type="button"></button>
+            </div>
           </li>
-        </ul>
-        <ul class="cards">
-          <li><img class="cards__img" src="./images/elements__dombay.png" alt="Домбай"></li>
-          <li class="cards__description"><h2 class="cards__title">Домбай</h2>
-            <button class="cards__like" type="button"></button>
+          <li class="cards">
+            <img class="cards__img" src="./images/elements__dombay.png" alt="Домбай">
+            <div class="cards__description">
+              <h2 class="cards__title">Домбай</h2>
+              <button class="cards__like" type="button"></button>
+            </div>
           </li>
-        </ul>
-        <ul class="cards">
-          <li><img class="cards__img" src="./images/elements__karachaevsk.jpg" alt="Фото Карачаевск"></li>
-          <li class="cards__description"><h2 class="cards__title">Карачаево-Черкессия</h2>
-            <button class="cards__like" type="button"></button>
+          <li class="cards">
+            <img class="cards__img" src="./images/elements__karachaevsk.jpg" alt="Фото Карачаевск">
+            <div class="cards__description">
+              <h2 class="cards__title">Карачаево-Черкессия</h2>
+              <button class="cards__like" type="button"></button>
+            </div>
           </li>
         </ul>
       </section>
@@ -68,9 +76,9 @@
       <div class="popup__cont">
         <button class="popup__close" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form name="form" class="popup__form">
-          <input name="name" type="text" class="popup__input" placeholder="Жак-Ив Кусто">
-          <input name="profession" type="text" class="popup__input" placeholder="Исследователь океана">
+        <form name="profile" class="popup__form">
+          <input name="name" type="text" class="popup__input" placeholder="имя">
+          <input name="profession" type="text" class="popup__input" placeholder="профессия">
           <button type="submit" class="popup__button">Сохранить</button>
         </form>
       </div>
