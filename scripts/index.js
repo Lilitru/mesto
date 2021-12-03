@@ -68,13 +68,18 @@ function submitForm(event){
     closePopup();
 }
 
+
 function getItem(item){
     const newItem = templateEl.content.cloneNode(true);
     const headerEl = newItem.querySelector('.cards__title');
     const imgEl = newItem.querySelector('.cards__img');
     headerEl.textContent = item.name;
     imgEl.src = item.link;
-
+    const like = newItem.querySelector('.cards__like');
+    function cardsLike(){
+        like.classList.toggle('cards__like_active');
+      }
+    like.addEventListener('click', cardsLike);
     return newItem;
 }
 
@@ -87,7 +92,7 @@ function render(){
 }
 render()
 
-
-
 form.addEventListener('submit', submitForm)
+
+
 
