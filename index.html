@@ -45,13 +45,24 @@
     <template class="template">
       <li class="cards">
         <button class="cards__remove" type="button"></button>
-        <img class="cards__img" src="" alt="Фото Карачаевск">
+        <img class="cards__img" src="" alt="Картинка">
         <div class="cards__description">
           <h2 class="cards__title"></h2>
           <button class="cards__like" type="button"></button>
         </div>
       </li>
     </template>
+    <div class="popup popup__gallery">
+      <div class="popup__cont">
+        <button class="popup__close" type="button"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form name="new_place" class="popup__form popup__form_add-card">
+          <input name="title" type="text" class="popup__input" placeholder="Название">
+          <input name="link" type="text" class="popup__input" placeholder="Ссылка на картинку">
+          <button type="submit" class="popup__button popup__button_add-card">Создать</button>
+        </form>
+      </div>
+    </div>
     <script src="scripts/index.js"></script>
   </body>
 </html>

@@ -6,11 +6,11 @@ const form = document.querySelector('.popup__form');
 
 const nameField = document.querySelector('input[name="name"]');
 const nameMan = document.querySelector('.profile__info-title');
-const professionField = document.querySelector('input[name="profession"]')
-const professionMan = document.querySelector('.profile__info-subtitle')
+const professionField = document.querySelector('input[name="profession"]');
+const professionMan = document.querySelector('.profile__info-subtitle');
 
-const listContainer = document.querySelector('.list')
-const templateEl=document.querySelector('.template')
+const listContainer = document.querySelector('.list');
+const templateEl=document.querySelector('.template');
 const initialCards = [
     {
       name: 'Мопс',
@@ -22,7 +22,7 @@ const initialCards = [
     },
     {
       name: 'Стаффордширский терьер',
-      link: 'https://images.unsplash.com/photo-1535554836559-dd299ea942dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1487&q=80'
+      link: 'https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=662&q=80'
       },
     {
       name: 'Французский бульдог',
@@ -47,6 +47,13 @@ function closePopup(){
     popup.classList.remove('popup_opened')
 }
 
+function openPopupGallery(){
+  popupGallery.classList.add('popup_opened');
+}
+function closePopupGallery(){
+  popupGallery.classList.remove('popup_opened');
+}
+
 infoButton.addEventListener('click', openPopup)
 popupClose.addEventListener('click', closePopup)
 
@@ -63,8 +70,6 @@ function submitForm(event){
     event.preventDefault();
     nameMan.textContent = nameField.value;
     professionMan.textContent = professionField.value;
-
-
     closePopup();
 }
 
@@ -80,6 +85,8 @@ function getItem(item){
         like.classList.toggle('cards__like_active');
       }
     like.addEventListener('click', cardsLike);
+    const deleteBtn = newItem.querySelector('.cards__remove');
+    deleteBtn.addEventListener('click', handleDelete);
     return newItem;
 }
 
@@ -90,9 +97,40 @@ function render(){
     });
     listContainer.append(...html);
 }
-render()
+render();
 
-form.addEventListener('submit', submitForm)
+form.addEventListener('submit', submitForm);
 
+const addButton = document.querySelector('.profile__addbutton');
+const popupGallery = document.querySelector('.popup__gallery');
+const titleField = document.querySelector('input[name="title"]');
+const linkField = document.querySelector('input[name="link"]');
+const popupCloseGallery = popupGallery.querySelector('.popup__close');
+const formAddCard = document.querySelector('.popup__form_add-card');
+
+
+
+popupCloseGallery.addEventListener('click', closePopupGallery);
+
+
+addButton.addEventListener('click', openPopupGallery);
+
+function handleAdd(event){
+  event.preventDefault();
+  const newItem = { name: titleField.value, link: linkField.value};
+  const listItem = getItem(newItem);
+  listContainer.prepend(listItem);
+  titleField.value = '';
+  linkField.value = '';
+  closePopupGallery();
+}
+
+formAddCard.addEventListener('submit', handleAdd);
+
+function handleDelete(event){
+  const targetEl = event.target;
+  const listItem = targetEl.closest('.cards');
+  listItem.remove();
+}
 
 
