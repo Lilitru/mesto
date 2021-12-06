@@ -105,7 +105,7 @@ render();
 form.addEventListener('submit', submitForm);
 
 const addButton = document.querySelector('.profile__addbutton');
-const popupGallery = document.querySelector('.popup__gallery');
+const popupGallery = document.querySelector('.popup_gallery');
 const titleField = document.querySelector('input[name="title"]');
 const linkField = document.querySelector('input[name="link"]');
 const popupCloseGallery = popupGallery.querySelector('.popup__close');
@@ -135,7 +135,7 @@ function handleDelete(event){
   listItem.remove();
 }
 
-const popupImg = document.querySelector('.popup__image');
+const popupImg = document.querySelector('.popup_image');
 const popupCloseImg = popupImg.querySelector('.popup__close'); 
 
 
