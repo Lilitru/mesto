@@ -8,4 +8,6 @@
   display: none;
   justify-content: center;
   align-items: flex-start;
+  visibility: hidden;
+  transition: all 0.4s linear;
 }

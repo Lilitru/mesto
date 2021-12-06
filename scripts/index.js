@@ -21,8 +21,8 @@ const initialCards = [
       link: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=694&q=80'
     },
     {
-      name: 'Стаффордширский терьер',
-      link: 'https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=662&q=80'
+      name: 'Мальтипу',
+      link: 'https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80'
       },
     {
       name: 'Французский бульдог',
@@ -73,6 +73,7 @@ function submitForm(event){
     closePopup();
 }
 
+const popupSubtitle = document.querySelector('.popup__subtitle')
 
 function getItem(item){
     const newItem = templateEl.content.cloneNode(true);
@@ -87,6 +88,8 @@ function getItem(item){
     like.addEventListener('click', cardsLike);
     const deleteBtn = newItem.querySelector('.cards__remove');
     deleteBtn.addEventListener('click', handleDelete);
+    imgEl.addEventListener('click', openPopupImg);
+    popupSubtitle.textContent = item.name;
     return newItem;
 }
 
@@ -107,7 +110,6 @@ const titleField = document.querySelector('input[name="title"]');
 const linkField = document.querySelector('input[name="link"]');
 const popupCloseGallery = popupGallery.querySelector('.popup__close');
 const formAddCard = document.querySelector('.popup__form_add-card');
-
 
 
 popupCloseGallery.addEventListener('click', closePopupGallery);
@@ -133,4 +135,17 @@ function handleDelete(event){
   listItem.remove();
 }
 
+const popupImg = document.querySelector('.popup__image');
+const popupCloseImg = popupImg.querySelector('.popup__close'); 
 
+
+function openPopupImg(event){
+  popupImg.classList.add('popup_opened');
+  const popupBackground = document.querySelector('.popup__img');
+  popupBackground.style.backgroundImage =`url(${event.srcElement.currentSrc})`;
+}
+function closePopupImg(){
+  popupImg.classList.remove('popup_opened');
+}
+
+popupCloseImg.addEventListener('click', closePopupImg);
