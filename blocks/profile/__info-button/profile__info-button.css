@@ -13,7 +13,7 @@
 .profile__info-button:hover {
   opacity: 0.6;
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1024px) {
   .profile__info-button {
     max-width: 18px;
     min-height: 18px;

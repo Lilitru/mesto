@@ -7,7 +7,7 @@
   margin: 50px 0 66px 0;
   max-width: 880px;
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1024px) {
   .list {
     grid-template-columns: 1fr;
     row-gap: 20px;

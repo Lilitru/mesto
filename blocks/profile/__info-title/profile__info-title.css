@@ -9,7 +9,7 @@
   overflow: hidden;
   white-space: nowrap;
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1024px) {
   .profile__info-title {
     max-width: 189px;
     font-size: 27px;
