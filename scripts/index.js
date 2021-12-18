@@ -50,8 +50,8 @@ const initialCards = [
 
   const closePopupEscape = (evt)=>{
     if (evt.key === 'Escape'){
-      const uncoverPopup = document.querySelector('.popup_opened');
-      closePopup(uncoverPopup);
+      const openedPopup = document.querySelector('.popup_opened');
+      closePopup(openedPopup);
     }
   }
 
@@ -61,6 +61,7 @@ function openPopup(popup){
 }
 function closePopup(popup){
     popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closePopupEscape);
 }
 
 function openPopupProfile(){
@@ -119,6 +120,12 @@ function handleAdd(event){
   listContainer.prepend(listItem);
   titleField.value = '';
   linkField.value = '';
+  
+  const buttonDisabled = popupGallery.querySelector('.popup__button')
+  event.target.reset();
+  buttonDisabled.classList.add('popup__button_disabled');
+  buttonDisabled.setAttribute('disabled', '')
+
   closePopup(popupGallery);
 }
 

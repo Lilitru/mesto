@@ -37,7 +37,7 @@ const showError = (form, input, errorMessageText, errorMessageClass, inputErrorC
   const setInputListeners = (form, {inputSelector, submitButtonSelector, inactiveButtonClass, ...rest})=>{
     const inputs = form.querySelectorAll(inputSelector);
     const submitButton = form.querySelector(submitButtonSelector);
-    
+    toggleButtonError(inputs, submitButton, inactiveButtonClass);
    inputs.forEach((input)=>{
      input.addEventListener('input', ()=>{
        checkIfInputValid(form, input, rest);
