@@ -137,6 +137,15 @@ function openPopupImg(item){
   popupSubtitle.textContent = item.name;
 }
 popupCloseImg.addEventListener('click', ()=> closePopup(popupImg));
-popupProfile.addEventListener('mouseup', ()=> closePopup(popupProfile));
-popupImg.addEventListener('mouseup', ()=> closePopup(popupImg));
-popupGallery.addEventListener('mouseup', ()=> closePopup(popupGallery));
+
+
+function popupClickHandler(event, popup){ 
+  console.log(event.target) 
+  if (event.target.classList.contains('popup')){  
+      closePopup(popup); 
+  } 
+} 
+
+popupProfile.addEventListener('mouseup', (e)=> popupClickHandler(e, popupProfile));
+popupImg.addEventListener('mouseup', (e)=> popupClickHandler(e, popupImg));
+popupGallery.addEventListener('mouseup', (e)=> popupClickHandler(e, popupGallery));
