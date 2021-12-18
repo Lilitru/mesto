@@ -48,12 +48,21 @@ const initialCards = [
   const popupCloseGallery = popupGallery.querySelector('.popup__close');
   const formAddCard = document.querySelector('.popup__form_add-card');
 
+  const closePopupEscape = (evt)=>{
+    if (evt.key === 'Escape'){
+      const uncoverPopup = document.querySelector('.popup_opened');
+      closePopup(uncoverPopup);
+    }
+  }
+
 function openPopup(popup){
     popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupEscape);
 }
 function closePopup(popup){
     popup.classList.remove('popup_opened');
 }
+
 function openPopupProfile(){
   openPopup(popupProfile);
   nameField.value = nameMan.textContent;
@@ -128,3 +137,6 @@ function openPopupImg(item){
   popupSubtitle.textContent = item.name;
 }
 popupCloseImg.addEventListener('click', ()=> closePopup(popupImg));
+popupProfile.addEventListener('mouseup', ()=> closePopup(popupProfile));
+popupImg.addEventListener('mouseup', ()=> closePopup(popupImg));
+popupGallery.addEventListener('mouseup', ()=> closePopup(popupGallery));
