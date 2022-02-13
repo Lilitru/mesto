@@ -1,3 +1,6 @@
+import Card from "./Card.js"
+import FormValidator from "./FormValidator.js";
+
 const popupProfile = document.querySelector('.popup_profile');
 const popupProfileClose = popupProfile.querySelector('.popup__close');
 const infoButton = document.querySelector('.profile__info-button');
@@ -12,8 +15,6 @@ const professionMan = document.querySelector('.profile__info-subtitle');
 const listContainer = document.querySelector('.list');
 const templateEl=document.querySelector('.template');
 
-import Card from "./Card.js"
-import FormValidator from "./FormValidator.js";
 
 const initialCards = [
     {
