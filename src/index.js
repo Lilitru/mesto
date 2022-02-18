@@ -4,6 +4,7 @@ import Section from "./Section.js";
 import PopupWithImage from "./PopupWithImage.js";
 import PopupWithForm from "./PopupWithForm.js";
 import UserInfo from "./UserInfo.js";
+import './pages/index.css';
 
 const infoButton = document.querySelector('.profile__info-button');
 const nameField = document.querySelector('input[name="name"]');
