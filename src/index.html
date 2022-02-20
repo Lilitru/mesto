@@ -12,7 +12,8 @@
     </header>
     <main class="content">
       <section class="profile">
-        <img class="profile__avatar" src="<%=require('./images/profile__image.jpg')%>" alt="Аватар пользователя">
+        <div class="profile__avatar-edit"></div>
+          <img class="profile__avatar" src="<%=require('./images/profile__image.jpg')%>" alt="Аватар пользователя">
         <div class="profile__info">
           <div class="profile__info-container">
             <h1 class="profile__info-title">Жак-Ив Кусто</h1>
@@ -43,13 +44,36 @@
         </form> 
       </div>
     </div>
+    <div class="popup popup_avatar">
+      <div class="popup__cont">
+        <button class="popup__close" type="button"></button>
+        <h2 class="popup__title">Обновить аватар</h2>
+        <form name="avatar" class="popup__form popup__form_avatar">
+          <input id="edit" name="edit" type="url" class="popup__input" required placeholder="Ссылка на картинку">
+          <span id="edit-error" class="error"></span>
+          <button type="submit" class="popup__button">Сохранить</button>
+        </form> 
+      </div>
+    </div>
+    <div class="popup popup_delete-card">
+      <div class="popup__cont">
+        <button class="popup__close" type="button"></button>
+        <h2 class="popup__title popup__title_delete">Вы уверены?</h2>
+        <form name="delete-card" class="popup__form popup__form_delete-card">
+          <button type="submit" class="popup__button popup__button_delete">Да</button>
+        </form> 
+      </div>
+    </div>
     <template class="template">
       <li class="cards">
         <button class="cards__remove" type="button"></button>
         <img class="cards__img" src="#" alt="Картинка">
         <div class="cards__description">
           <h2 class="cards__title"></h2>
-          <button class="cards__like" type="button"></button>
+          <div class="cards__container-like">
+            <button class="cards__like" type="button"></button>
+            <div class="cards__counter">0</div>
+          </div>
         </div>
       </li>
     </template>
